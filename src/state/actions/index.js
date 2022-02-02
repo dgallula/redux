@@ -1,9 +1,20 @@
+
 function createTodo(message) {
     return {
 
-    type:'CREATE TODO',   // keyword unique qui sert a identifier l' action 
+    type:'CREATE_TODO',   // keyword unique qui sert a identifier l' action 
     payload: {
-        message
-    },
+        message,
+    }
   };    
 }
+
+function checkTodo(id) {
+  return {
+    type: 'CHECK_TODO',
+    payload:{ id,
+    }
+
+  };
+}
+export{createTodo, checkTodo}; 
